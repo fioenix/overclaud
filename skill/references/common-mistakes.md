@@ -115,7 +115,7 @@ project/CLAUDE.md:
 No abbreviations except well-known (html, url, id)."
 ```
 
-**Prevention:** Review layers systematically. Check `claude-opz debug --config` output for overlapping instructions.
+**Prevention:** Review layers systematically. Check `overclaud debug --config` output for overlapping instructions.
 
 ## 4. Over-Formatting Instructions (Treating Them as Documents)
 
@@ -497,7 +497,7 @@ Before committing CLAUDE.md or rules:
 
 **If Claude ignores a rule:**
 
-1. **Verify it loaded.** Run `claude-opz debug --config` and check output.
+1. **Verify it loaded.** Run `overclaud debug --config` and check output.
 2. **Check precedence.** A higher-priority layer may override it.
 3. **Check path matching.** Rule files with `paths:` may not apply to the file being edited.
 4. **Verify the rule is clear.** If instruction is vague, Claude may "miss" it.

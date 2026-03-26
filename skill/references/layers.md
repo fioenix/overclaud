@@ -251,7 +251,7 @@ Instructions here are loaded as-is.
 **Problem:** Claude sometimes ignores an instruction.
 
 **Diagnosis:**
-1. Verify the file was loaded: check `claude-opz debug --config` output
+1. Verify the file was loaded: check `overclaud debug --config` output
 2. Check precedence: a higher-priority layer may be overriding it
 3. Verify path matching: rules with `paths:` may not apply to the file being edited
 4. Check line count: auto memory caps at 200 lines (older content is lost)

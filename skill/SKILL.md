@@ -1,5 +1,5 @@
 ---
-name: claude-opz
+name: overclaud
 description: >
   Set up, upgrade, and optimize Claude instructions across all surfaces — CLAUDE.md (global and
   project), Personal Preferences, Cowork project instructions, and .claude/rules/. Trigger this
@@ -7,7 +7,7 @@ description: >
   "improve my Claude setup", "create personal preferences", "optimize my project CLAUDE.md",
   or any variation of making Claude work better for them. Also trigger when: user just ran /init
   and wants to improve the generated CLAUDE.md, user wants instructions for Cowork or Chat settings,
-  user says "claude-opz", or user asks where to put a specific Claude instruction. This skill
+  user says "overclaud", or user asks where to put a specific Claude instruction. This skill
   handles both fresh setup AND upgrading existing instructions.
 ---
 
@@ -305,7 +305,7 @@ are well-known anti-patterns.
 ## Auto-Suggest Hook: Offer to Install
 
 After completing any setup flow (A through E), offer to install the auto-suggest hook. This hook
-makes Claude automatically suggest running claude-opz after `/init` creates a CLAUDE.md.
+makes Claude automatically suggest running overclaud after `/init` creates a CLAUDE.md.
 
 ### How to Offer
 
@@ -334,7 +334,7 @@ The hook config to add/merge:
         "hooks": [
           {
             "type": "command",
-            "command": "bash -c 'FILE=$(echo \"$TOOL_INPUT\" | jq -r \".file_path // .path // empty\" 2>/dev/null); if [ -n \"$FILE\" ] && echo \"$FILE\" | grep -q \"CLAUDE\\.md\"; then printf \"{\\\"systemMessage\\\": \\\"A CLAUDE.md file was just created or modified. You can optimize it with the claude-opz skill — just say: optimize my project CLAUDE.md\\\"}\"; fi'",
+            "command": "bash -c 'FILE=$(echo \"$TOOL_INPUT\" | jq -r \".file_path // .path // empty\" 2>/dev/null); if [ -n \"$FILE\" ] && echo \"$FILE\" | grep -q \"CLAUDE\\.md\"; then printf \"{\\\"systemMessage\\\": \\\"A CLAUDE.md file was just created or modified. You can optimize it with the overclaud skill — just say: optimize my project CLAUDE.md\\\"}\"; fi'",
             "timeout": 5,
             "once": true
           }
@@ -364,7 +364,7 @@ Confirm to the user:
 User runs /init on a new project
 → /init writes CLAUDE.md (via Write tool)
 → PostToolUse hook fires, detects CLAUDE.md in file path
-→ systemMessage injected: suggests running claude-opz
+→ systemMessage injected: suggests running overclaud
 → Claude mentions optimization option to user
 → once: true — stays quiet for rest of session
 ```

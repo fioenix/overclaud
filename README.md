@@ -1,8 +1,8 @@
-# claude-opz
+# overclaud
 
 Optimize how Claude works for you — across every surface.
 
-Claude reads your instructions every message, but most users either don't set them up, put everything in one place, or waste tokens on vague guidance. **claude-opz** fixes that.
+Claude reads your instructions every message, but most users either don't set them up, put everything in one place, or waste tokens on vague guidance. **overclaud** fixes that.
 
 ## What This Is
 
@@ -35,11 +35,11 @@ Most users dump everything into one CLAUDE.md. The result: bloated context, wron
 
 ### Option 1: Install as a Skill (Recommended)
 
-Download [`claude-opz.skill`](claude-opz.skill) from this repo, then:
+Download [`overclaud.skill`](overclaud.skill) from this repo, then:
 
 **Claude Code:**
 ```bash
-claude install-skill claude-opz.skill
+claude install-skill overclaud.skill
 ```
 
 **Cowork:** Drop the `.skill` file into your Cowork session.
@@ -54,7 +54,7 @@ Copy this into any Claude conversation:
 
 ```
 Fetch and follow the setup guide at:
-https://raw.githubusercontent.com/Fioenix/claude-opz/main/skill/SKILL.md
+https://raw.githubusercontent.com/Fioenix/overclaud/main/skill/SKILL.md
 
 Read the reference files in skill/references/ and templates in skill/templates/.
 Ask me about my role and preferences, then help me set up optimized Claude instructions.
@@ -67,7 +67,7 @@ run `/init` on a new project. Claude handles the installation — no manual conf
 
 ```
 You: set up my Claude instructions
-Claude: [runs claude-opz skill, sets everything up]
+Claude: [runs overclaud skill, sets everything up]
 Claude: "Want me to enable auto-optimization? Next time you /init a project,
          I'll suggest optimizing the generated CLAUDE.md automatically."
 You: yes
@@ -110,12 +110,12 @@ Your global CLAUDE.md loads into every message. At 100 messages/day:
 | 200 | 20,000 | 600,000 |
 | 500 | 50,000 | 1,500,000 |
 
-**claude-opz** templates are designed to maximize signal per token. See [`skill/references/token-optimization.md`](skill/references/token-optimization.md) for techniques.
+**overclaud** templates are designed to maximize signal per token. See [`skill/references/token-optimization.md`](skill/references/token-optimization.md) for techniques.
 
 ## Repo Structure
 
 ```
-claude-opz/
+overclaud/
 ├── README.md
 ├── skill/
 │   ├── SKILL.md                    # Installable skill — the setup agent

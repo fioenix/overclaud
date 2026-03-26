@@ -1,4 +1,4 @@
-# Contributing to claude-opz
+# Contributing to overclaud
 
 Thanks for wanting to make Claude work better for everyone.
 

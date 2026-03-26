@@ -2,17 +2,17 @@
 
 ## Reporting Vulnerabilities
 
-If you discover a security vulnerability in claude-opz, please report it responsibly:
+If you discover a security vulnerability in overclaud, please report it responsibly:
 
 1. **Do not** open a public GitHub issue
-2. Email: tangduyphuong@gmail.com with subject "claude-opz security"
+2. Email: tangduyphuong@gmail.com with subject "overclaud security"
 3. Include: description, reproduction steps, potential impact
 
 We aim to respond within 48 hours.
 
 ## Scope
 
-claude-opz is an instruction optimization skill. It:
+overclaud is an instruction optimization skill. It:
 - Reads and writes local files (CLAUDE.md, settings.json, rules/)
 - Never makes external API calls or network requests
 - Never collects, stores, or transmits user data
