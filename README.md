@@ -35,7 +35,7 @@ Most users dump everything into one CLAUDE.md. The result: bloated context, wron
 
 ### Option 1: Install as a Skill (Recommended)
 
-Download the `.skill` file from [Releases](../../releases), then:
+Download [`claude-opz.skill`](claude-opz.skill) from this repo, then:
 
 **Claude Code:**
 ```bash
@@ -54,7 +54,7 @@ Copy this into any Claude conversation:
 
 ```
 Fetch and follow the setup guide at:
-https://raw.githubusercontent.com/anthropics/claude-opz/main/skill/SKILL.md
+https://raw.githubusercontent.com/Fioenix/claude-opz/main/skill/SKILL.md
 
 Read the reference files in skill/references/ and templates in skill/templates/.
 Ask me about my role and preferences, then help me set up optimized Claude instructions.
