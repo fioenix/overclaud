@@ -1,3 +1,5 @@
+
+
 # Hatch
 
 > Embedded harness cho một squad coding-agent làm chung trên một repo — tối ưu instructions + context + **phối hợp** cho **nhiều** agent, trên nhiều surface. Sản phẩm thuộc hệ sinh thái **Finolabs** (Fioenix + Dinosaur Labs).
@@ -224,7 +226,7 @@ Người xem bằng hatch board / hatch chat / hatch status; chèn ý kiến b�
 
 Pivot **embedded-harness** đã implement (xem [doc 20](docs/20-embedded-harness-pivot.md)):
 
-- **MCP server** (`hatch mcp --as <agent>`, stdio) trên bus/KB — tools whoami · chat_open · chat_post · chat_read · chat_inbox · chat_search · chat_channels · kb_add · kb_search (`internal/mcpserver`, `internal/cli/mcp.go`).
+- **MCP server** (`hatch mcp --as <agent>`, stdio) trên bus/KB — tools whoami · join · roster · leave · chat_open · chat_post · chat_read · chat_inbox · chat_search · chat_channels · kb_add · kb_search (`internal/mcpserver`, `internal/cli/mcp.go`).
 - **compile đổi mục đích**: tiêm protocol (charter + roles + workflow-prose + DoD self-check + chat etiquette + khối orchestrator cho lead) vào CLAUDE.md/AGENTS.md/GEMINI.md/.kiro, kèm đăng ký MCP cho kiro (`.kiro/settings/mcp.json` merge) + snippet `.hatch/mcp/*` cho Codex/agy. Claude nạp MCP qua plugin, nên không ghi `.mcp.json`.
 - **Claude plugin** tại `plugin/` (MCP + skill `hatch-chat` + slash `/hatch`); `.claude-plugin/marketplace.json` ở repo root.
 - **chat/status read-only**: `hatch chat` = live TUI một-view (threads + chat + squad stats ở footer; `board`/`watch` là alias); `status` = tóm tắt thread + roster. Không còn run/claim/compose.
